@@ -11,6 +11,8 @@ const player1El = document.querySelector(".player_1");
 
 //btns
 const btnRoll = document.getElementById("btn_roll");
+const btnHold = document.getElementById("btn_hold");
+
 
 
 score0El.textContent = 0;
@@ -19,8 +21,8 @@ diceEl.classList.add("hidden");
 
 // cleare score
 let currentScore = 0;
-//active player
 let activePlayer = 0;
+let scores = [0, 0];
 
 
 btnRoll.addEventListener('click', function(){
@@ -50,7 +52,20 @@ btnRoll.addEventListener('click', function(){
     }
 });
 
+//btn HOLD event
+btnHold.addEventListener("click", function () {
+    scores[activePlayer] += currentScore;
+    console.log(scores);
+    document.getElementById(`score_${activePlayer}`).textContent = scores[activePlayer];
 
+    if (scores[activePlayer] >= 20) {
+        document.querySelector(`.player_${activePlayer}`).classList.add('player_winner');
+        
+    } else {
+        
+    }
+
+});
 
 
 
