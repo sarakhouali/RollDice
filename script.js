@@ -7,7 +7,7 @@ const current1El = document.getElementById("current_1");
 // player
 const player0El = document.querySelector(".player_0");
 const player1El = document.querySelector(".player_1");
-let player1, player2;
+
 //btns
 const btnRoll = document.getElementById("btn_roll");
 const btnHold = document.getElementById("btn_hold");
@@ -15,6 +15,8 @@ const btnNew = document.getElementById("btn_new");
 
 // cleare score
 let scores, currentScore, activePlayer, playGame;
+//achieved score
+const achivedScore = document.getElementById("inputScore");
 //initialize function
 const initFunc = function() {
     score0El.textContent = 0;
@@ -34,6 +36,8 @@ const initFunc = function() {
     player1El.classList.remove('player_winner');
     player0El.classList.add('player_active');
     player1El.classList.remove('player_active');
+
+    achivedScore.value = null;
 
 
 };
@@ -86,7 +90,7 @@ btnHold.addEventListener('click', function () {
         console.log(scores);
         document.getElementById(`score_${activePlayer}`).textContent = scores[activePlayer];
 
-        if (scores[activePlayer] >= 20) {
+        if (scores[activePlayer] >= achivedScore.value) {
             playGame = false;
             document.querySelector(`.player_${activePlayer}`).classList.add('player_winner');
             document.querySelector(`.player_${activePlayer}`).classList.add('player_active');
