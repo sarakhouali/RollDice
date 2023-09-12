@@ -5,7 +5,7 @@ body {
 .container{
     height: 100%;
     box-shadow: 0 2px 5px rgba(128, 0, 241, 0.1);
-    background: linear-gradient(45deg, #beffbe, 50%, rgb(162, 224, 255));
+
 
 }
 .player {
@@ -39,7 +39,7 @@ button:hover{
 }
 
 .player_active {
-    background: rgba(102, 255, 0, 0.25);
+    background: rgba(206, 206, 206, 0.25);
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }

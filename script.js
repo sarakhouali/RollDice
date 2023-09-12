@@ -37,7 +37,7 @@ const initFunc = function() {
     player0El.classList.add('player_active');
     player1El.classList.remove('player_active');
 
-    achivedScore.value = null;
+    achivedScore.value = 100;
 
 
 };
