@@ -39,7 +39,6 @@ const initFunc = function() {
 
     achivedScore.value = 100;
 
-
 };
 
 initFunc();
@@ -51,7 +50,8 @@ const switchPlayer = function(){
     activePlayer = activePlayer === 0 ? 1 : 0;
     currentScore =0;
     player0El.classList.toggle("player_active");
-    player1El.classList.toggle("player_active");    
+    player1El.classList.toggle("player_active");
+
 
 };
 
