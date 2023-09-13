@@ -1,12 +1,8 @@
-body {
-    background-size: 100% 100%;
-    text-transform: capitalize;
-}
+
 .container{
     height: 100%;
     box-shadow: 0 2px 5px rgba(128, 0, 241, 0.1);
-
-
+    font-family: 'Lato', sans-serif;
 }
 .player {
     height: 300px;
